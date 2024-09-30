@@ -1,0 +1,39 @@
+{
+  "login": {
+    "name": "James Taylor",
+    "email": "jamest@gmail.com",
+    "password": "123456"
+  },
+  "inv_pass": {
+    "email": "jamest@gmail.com",
+    "password": "invalid"
+  },
+  "inv_email": {
+    "email": "jamest.gmail.com",
+    "password": "123456"
+  },
+  "emp_field": {
+    "email": "",
+    "password": ""
+  },
+  "email_404": {
+    "email": "404@gmail.com",
+    "password": "123456"
+  },
+  "create": {
+    "name": "Lorita Rodrigues",
+    "email": "lorita@gmail.com",
+    "password": "123456"
+  },
+  "dupl_email": {
+    "name": "James Taylor",
+    "email": "jamest@gmail.com",
+    "password": "123456"
+  },
+  "required":{
+    "name": "James Taylor",
+    "email": "jamest@gmail.com",
+    "password": "123456"
+  }
+
+}

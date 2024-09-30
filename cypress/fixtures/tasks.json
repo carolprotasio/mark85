@@ -1,0 +1,17 @@
+{
+    "create": {
+        "user": {
+            "name": "Test123",
+            "email": "cteste123@qa.com",
+            "password": "123456"
+        },
+        "task": {
+            "name": "new test",
+            "tags": [
+                "task1",
+                "task2",
+                "task3"
+            ]
+        }
+    }
+}
