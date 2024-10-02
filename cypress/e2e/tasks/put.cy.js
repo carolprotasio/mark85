@@ -6,7 +6,7 @@ describe('PUT/ tasks/:id/done', () => {
             this.tasks = tasks
         })
     })
-    it('CT-001 change a task', function () {
+    it('CT-001 update task - done', function () {
         const { user, task } = this.tasks.update
 
         cy.task('removeUser', user.email)
@@ -20,6 +20,10 @@ describe('PUT/ tasks/:id/done', () => {
                             .then(response => {
                                 expect(response.status).to.eq(204)
                             })
+                        cy.getUniqueTask(taskResp.body._id, userResp.body.token)
+                          .then(response => [
+                            expect(response.body.is_done).to.be.true
+                          ])
                     })
             })
     })

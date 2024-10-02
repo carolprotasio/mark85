@@ -1,8 +1,8 @@
 {
     "create": {
         "user": {
-            "name": "Test",
-            "email": "cteste@qa.com",
+            "name": "Criador task",
+            "email": "task@qa.com",
             "password": "123456"
         },
         "task": {

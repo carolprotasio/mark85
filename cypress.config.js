@@ -1,11 +1,16 @@
 const { defineConfig } = require("cypress");
 const { connect } = require('./cypress/support/mongo')
 
+const allureWriter = require('@shelex/cypress-allure-plugin/writer')
+
+require('dotenv').config()
+
 module.exports = defineConfig({
   e2e: {
     watchForFileChanges: false,
     async setupNodeEvents(on, config) {
       // implement node event listeners here
+      allureWriter(on, config)
       const db = await connect()
 
       on('task', {
@@ -23,16 +28,25 @@ module.exports = defineConfig({
           return null
         },
         async removeTaskLike(key) {
-         const tasks = db.collection('tasks')
-          await tasks.deleteMany({ name: { $regex: key} })
+          const tasks = db.collection('tasks')
+          await tasks.deleteMany({ name: { $regex: key } })
           return null
         },
+        
 
       })
 
-
+      return config
     },
-    baseUrl: 'http://localhost:3333',
-    video: false
+    baseUrl: process.env.BASE_URL,
+    video: false,
+    screenshotsFolder: false,
+    screenshotOnRunFailure: false,
+    env: {
+      ampqHost: process.env.AMPQ_HOST,
+      ampqQueue: process.env.AMPQ_QUEUE,
+      ampqToken: process.env.AMPQ_TOKEN,
+      allure: true
+    }
   },
 });
