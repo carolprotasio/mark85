@@ -9,16 +9,16 @@ describe('POST /users', () => {
   })
   it('CT-001 register new user', function () {
     const user = this.users.create
-    cy.task('deleteUser', user.email)
+    cy.task('removeUser', user.email)
 
     cy.postUser(user)
       .then(response => {
-        expect(response.status).to.eq(200)
+        expect(response.status).to.eq(201)
       })
   })
   it('CT-002 duplicate email', function () {
     const user = this.users.dupl_email
-    cy.task('deleteUser', user.email)
+    cy.task('removeUser', user.email)
 
     cy.postUser(user)
     cy.postUser(user)

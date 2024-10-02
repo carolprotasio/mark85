@@ -1,8 +1,8 @@
 {
     "create": {
         "user": {
-            "name": "Test123",
-            "email": "cteste123@qa.com",
+            "name": "Test",
+            "email": "cteste@qa.com",
             "password": "123456"
         },
         "task": {
@@ -13,5 +13,70 @@
                 "task3"
             ]
         }
+    },
+    "emptyField": {
+        "user": {
+            "name": "Test",
+            "email": "cteste@qa.com",
+            "password": "123456"
+        },
+        "task": {
+            "name": "",
+            "tags": []
+        }
+    },
+    "list": {
+        "user": {
+            "name": "Test",
+            "email": "cteste@qa.com",
+            "password": "123456"
+        },
+        "tasks": [
+            {
+                "name": "Estud4r plywright",
+                "tags": []
+            },
+            {
+                "name": "Estud4r selenium",
+                "tags": [ ]
+            },
+            {
+                "name": "Estud4r Cypress",
+                "tags": [
+                    "JS",
+                    "nodeJs"
+                ]
+            }
+        ]
+    },    
+    "unique": {
+        "user": {
+            "name": "Test",
+            "email": "cteste@qa.com",
+            "password": "123456"
+        },
+        "task": {
+            "name": "Estuda4r QA",
+            "tags": [
+                "js",
+                "nodeJs",
+                "cypress"
+            ]
+        }
+    },
+    "notFound": {
+        "user": {
+            "name": "John Smith",
+            "email": "John@smith.com",
+            "password": "123456"
+        },
+        "task":  {
+            "name": "Estud4r Cypress",
+            "tags": [
+                "JS",
+                "nodeJs"
+            ]
+        }
+            
     }
 }
