@@ -86,3 +86,13 @@ Cypress.Commands.add('deleteTask', (taskId, token) => {
     failOnStatusCode: false
   }).then(response => { return response })
 })
+Cypress.Commands.add('putTask', (taskId, token) => {
+  cy.api({
+    url: '/tasks/' + taskId + /done/,
+    method: 'PUT',
+    headers: {
+      authorization: token
+    },
+    failOnStatusCode: false
+  }).then(response => { return response })
+})

@@ -78,5 +78,47 @@
             ]
         }
             
+    },
+    "remove": {
+        "user": {
+            "name": "Test remove",
+            "email": "remove@qa.com",
+            "password": "123456"
+        },
+        "task": {
+            "name": "Pintar a parede",
+            "tags": [
+                "azul",
+                "cinza",
+                "bege"
+            ]
+        }
+    },
+    "not_found": {
+        "user": {
+            "name": "Lola Thor",
+            "email": "thor@gmail.com",
+            "password": "123456"
+        },
+        "task":  {
+            "name": "Designer o studio"
+           
+        }
+            
+    },
+    "update": {
+        "user": {
+            "name": "Test put",
+            "email": "put@qa.com",
+            "password": "123456"
+        },
+        "task": {
+            "name": "Comprar headphones",
+            "tags": [
+                "azul",
+                "branco",
+                "preto"
+            ]
+        }
     }
 }
