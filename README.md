@@ -1,7 +1,7 @@
-# Mark85 - Testes de API com Cypress
+# Mark85 - Testes de API REST com Cypress
 
 ## 🚀 Sobre o Projeto
-Mark85 é uma aplicação de gerenciamento de tarefas que permite aos usuários cadastrar, criar, excluir, e marcar tarefas como concluídas. O fluxo principal do aplicativo envolve o cadastro de novos usuários, login, e manipulação das tasks, o que exige que o usuário crie uma conta para gerenciar suas tarefas. Este projeto de **testes automatizados de API** foi desenvolvido para garantir que as funcionalidades da API do Mark85 estejam funcionando corretamente. Os testes foram feitos utilizando o **Cypress**. As rotas da API foram identificadas através de testes manuais utilizando o DevTools do navegador e para para testar as requisições HTTP foi usado o **Insomnia**. O objetivo principal é testar o comportamento da API, garantindo que todas as operações cruciais (como autenticação, criação, atualização e exclusão de tarefas) estejam sendo executadas conforme o esperado.    
+Mark85 é uma aplicação de gerenciamento de tarefas que permite aos usuários cadastrar, criar, excluir, e marcar tarefas como concluídas. O fluxo principal do aplicativo envolve o cadastro de novos usuários, login, e manipulação das tasks, o que exige que o usuário crie uma conta para gerenciar suas tarefas. Este projeto de **testes automatizados de API REST** foi desenvolvido para garantir que as funcionalidades da API do Mark85 estejam funcionando corretamente. Os testes foram feitos utilizando o **Cypress**. As rotas da API foram identificadas através de testes manuais utilizando o DevTools do navegador e para para testar as requisições HTTP foi usado o **Insomnia**. O objetivo principal é testar o comportamento da API, garantindo que todas as operações cruciais (como autenticação, criação, atualização e exclusão de tarefas) estejam sendo executadas conforme o esperado.    
 
 <img src="https://github.com/carolprotasio/mark85/blob/main/assets/register.png" alt="web" width="800"/>
 <img src="https://github.com/carolprotasio/mark85/blob/main/assets/tasks.png" alt="web" width="800"/>
@@ -9,6 +9,8 @@ Mark85 é uma aplicação de gerenciamento de tarefas que permite aos usuários 
 ## 🛠️ Tecnologias Utilizadas
 
 - Cypress
+- JavaScript
+- NodeJs
 - MongoDB
 - RabbitMQ
 - Insomnia
