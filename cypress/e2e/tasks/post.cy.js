@@ -5,17 +5,17 @@ describe('POST /task', () => {
         cy.fixture('tasks').then(function (tasks) {
             this.tasks = tasks
         })
-        
+
     })
 
     context('CT-001 register a new task', function () {
-        /* before(function () {
+        before(function () {
             cy.purgeQueueMessages()
                 .then(response => {
                     expect(response.status).to.eq(204)
                 })
-                
-        }) */
+
+        })
         it('post task', function () {
             const { user, task } = this.tasks.create
             cy.task('removeUser', user.email)
@@ -36,17 +36,17 @@ describe('POST /task', () => {
                         })
                 })
         })
-   /*      after(function () {            
-            const { user, task } = this.tasks.create
+        after(function () {
             cy.wait(3000)
+            const { user, task } = this.tasks.create
             cy.getQueueMessages()
                 .then(response => {
-                    expect(response.status).to.eq(200)                    
+                    expect(response.status).to.eq(200)
                     expect(response.body[0].payload).to.include(user.name.split(' ')[0])
                     expect(response.body[0].payload).to.include(task.name)
                     expect(response.body[0].payload).to.include(user.email)
                 })
-        }) */
+        })
     })
 
     it('CT-002 register duplicated task', function () {
