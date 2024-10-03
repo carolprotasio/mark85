@@ -11,9 +11,11 @@ Mark85 é uma aplicação de gerenciamento de tarefas que permite aos usuários 
 - Cypress
 - MongoDB
 - RabbitMQ
-- Allure Report
+- Insomnia
+- Allure Report 
 
 <img src="https://github.com/carolprotasio/mark85/blob/main/assets/allure-overview.png" alt="web" width="400"/>
+<img src="https://github.com/carolprotasio/mark85/blob/main/assets/insomnia.png" alt="web" width="400"/>
 
 ## 🔍 Cenários e Casos de Teste
 
