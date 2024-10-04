@@ -1,0 +1,44 @@
+name: Cypress CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+# Definindo o ambiente onde os testes serão executados
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    # Passos do workflow
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3   
+
+      - name: Instalar dependências do projeto
+        run: npm install
+
+      - name: Iniciar o MongoDB para testes locais
+        run: sudo systemctl start mongodb
+
+      - name: Executar testes com Cypress
+        run: npm run test
+
+      - name: Geração de Relatório Allure
+        run: npm run allure:generate
+
+      - name: Publicar Relatório Allure (opcional)
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-report
+          path: allure-report
+
+      - name: Fazer upload dos resultados dos testes
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-results
+          path: cypress/results
